@@ -1,93 +1,53 @@
-.flip-container {
+.container {
   width: 80%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
 
 }
-.flip-wrapper {
-  max-width: 650px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -o-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -o-flex-wrap: wrap;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-box {
-  background-color: none;
-  width: 300px;
-  height: 200px;
-  border: none;
-  /*perspective: 1000px;  Remove this if you don't want the 3D effect */
- flex: 0 0 auto;
-  margin: 5px;
 
-}
-.controls {
-  /*display: none;*/
-  transition: "1s";
-  position: absolute;
-  top:0;
-  right: -35%;
-  z-index: 0;
+ .flip-container {
+      -webkit-perspective: 1000;
+      -moz-perspective: 1000;
+      -ms-perspective: 1000;
+      perspective: 1000;
+
+      -ms-transform: perspective(1000px);
+      -moz-transform: perspective(1000px);
+          -moz-transform-style: preserve-3d; 
+          -ms-transform-style: preserve-3d; 
+
+      border: 1px solid #ccc;
+    }
+
+      /*
+      .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        filter: FlipH;
+          -ms-filter: "FlipH";
+      }
+      */
+
+
+      /* START: Accommodating for IE */
+      .flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+     transition: "1s";
 }
 
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  /*transform: rotateY(180deg);*/
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  backface-visibility: hidden;
-  transform: rotate(0deg);
-}
-
-/* Style the front side (fallback if image is missing) */
-/*.flip-box-front {
-  background-color: #bbb;
-  color: black;
-  -moz-transform: rotate(-0deg);
--webkit-transform: rotate(-0deg);
--o-transform: rotate(-0deg);
--ms-transform: rotate(-0deg);
-transform: rotate(-0deg);
-position: absolute;
-}*/
-.flip-box-front>img {
-  max-height: 100%;
-
-}
-/* Style the back side */
-.flip-box-back {
- /* background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);*/
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    
 }
 
 .rotate_left {
