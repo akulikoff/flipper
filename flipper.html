@@ -15,11 +15,14 @@
 				<img src="https://cdn.monetnik.ru/storage/market-lot/31/97/163731/539952_mainViewLot.jpg" alt="">
 			</div>
 			<div class="back">
-				<img src="https://cdn.monetnik.ru/storage/market-lot/31/97/163731/539953_mainViewLot.jpg" alt="">
+				
 			</div>
 		</div>
 		<div class="controls">
-			<button onclick="document.querySelector('.flip-container').classList.toggle('back');" class="sexyButton">Toggle Flip</button>
+			<button onclick="document.querySelector('.flip-container').classList.add('horizontal-right');" class="sexyButton">Flip right</button>
+			<button onclick="document.querySelector('.flip-container').classList.remove('horizontal-right');" class="sexyButton">Flip left</button>
+			<button onclick="document.querySelector('.flip-container').classList.add('vertical-right');" class="sexyButton">Flip top</button>
+			<button onclick="document.querySelector('.flip-container').classList.remove('vertical-right');" class="sexyButton">Flip down</button>
 		</div>
 		
 		
