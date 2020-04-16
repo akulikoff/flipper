@@ -19,8 +19,8 @@
 			</div>
 		</div>
 		<div class="controls">
-			<button onclick="document.querySelector('.flip-container').classList.add('horizontal-right');" class="sexyButton">Flip right</button>
-			<button onclick="document.querySelector('.flip-container').classList.remove('horizontal-right');" class="sexyButton">Flip left</button>
+			<button onclick="document.querySelector('.flip-container').classList.remove('horizontal-left'); document.querySelector('.flip-container').classList.add('horizontal-right');" class="sexyButton">Flip right</button>
+			<button onclick="document.querySelector('.flip-container').classList.remove('horizontal-right'); document.querySelector('.flip-container').classList.add('horizontal-left');" class="sexyButton">Flip left</button>
 			<button onclick="document.querySelector('.flip-container').classList.add('vertical-right');" class="sexyButton">Flip top</button>
 			<button onclick="document.querySelector('.flip-container').classList.remove('vertical-right');" class="sexyButton">Flip down</button>
 		</div>
