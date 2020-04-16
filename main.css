@@ -23,12 +23,22 @@
 }
       
       .horizontal-right .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        transform: rotateY(180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
         filter: FlipH;
           -ms-filter: "FlipH";
+
+}
+ .horizontal-left .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        filter: FlipH;
+          -ms-filter: "FlipH";
+          
 }
 .vertical-right .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
         -webkit-transform: rotateX(180deg);
