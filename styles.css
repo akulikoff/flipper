@@ -1,0 +1,120 @@
+.flip-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+button {
+  cursor: pointer;
+
+}
+.flip-wrapper {
+  max-width: 650px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.flip-container_ {
+   width: 100%;
+   min-height: 200px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-image: url("https://cdn.monetnik.ru/storage/market-lot/31/97/163731/539952_mainViewLot.jpg");
+  background-repeat: no-repeat;
+  background-size: 25%;
+   position: relative;
+  overflow: hidden;
+
+
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: none;
+  width: 300px;
+  height: 200px;
+  border: none;
+  /*perspective: 1000px;  Remove this if you don't want the 3D effect */
+ flex: 0 0 auto;
+  margin: 5px;
+
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+.controls_ {
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    z-index: -1;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.front, .flipper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+  transform: rotate(0deg);
+}
+
+
+.front>img {
+  max-height: 100%;
+
+}
+/* Style the back side */
+
+
+  .rotate {
+    transform: rotate(90deg);
+    transition: "1s";
+  }
+  .unrotate {
+    transform: rotate(-90deg);
+    transition: "1s";
+  }
+  .vertical {
+    transform: rotate(120deg);
+     transition: "1s";
+  }
+  .pic {
+    border: 1px solid red;
+  }
+  #add {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+  }
+  #del {
+    position: absolute;
+    margin: 0 auto;
+    top: 20px;
+    
+  }
