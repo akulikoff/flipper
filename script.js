@@ -4,6 +4,8 @@ var leftFlip = 'rotate(-90deg)';
 const flip = document.getElementsByClassName('flip-container');
 const flipper = document.getElementsByClassName('front')[0].closest('.flip-container');
 const btns = document.getElementsByTagName('buttons');
+var newFlip = document.querySelector('.flip-container'); 
+var copyDeep = newFlip.cloneNode(true);
 
 
 for (let btn of btns) {
@@ -58,10 +60,11 @@ delButton.addEventListener('click', del);
 
 
 function add() {
-    var newFlip = document.createElement('div');
-    newFlip.innerHTML += '<div class="flip-container"><div class="flipper"><div class="front"><img src="https://cdn.monetnik.ru/storage/market-lot/31/97/163731/539952_mainViewLot.jpg" alt=""></div></div><div class="controls"><button data-action="right">Flip right</button><button data-action="left">Flip left</button>         <button data-action="top">Flip top</button>         <button data-action="down">Flip down</button>            </div>        </div>' ; 
+   
+    // newFlip.innerHTML += '<div class="flip-container"><div class="flipper"><div class="front"><img src="https://cdn.monetnik.ru/storage/market-lot/31/97/163731/539952_mainViewLot.jpg" alt=""></div></div><div class="controls"><button data-action="right">Flip right</button><button data-action="left">Flip left</button>         <button data-action="top">Flip top</button>         <button data-action="down">Flip down</button>            </div>        </div>' ; 
+   
            newFlip.addEventListener('click', add); //навесим событие на новую картинку
-    wrap.appendChild(newFlip);
+    wrap.appendChild(copyDeep);
 };
 function del() {
     wrap.lastChild.remove();
